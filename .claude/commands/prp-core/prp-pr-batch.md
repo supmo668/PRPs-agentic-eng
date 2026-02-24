@@ -71,10 +71,7 @@ For each approved branch:
    git checkout {branch}
    ```
 
-2. **Invoke the `/prp-pr` workflow**:
-   - Follow ALL phases of `/prp-pr` (Validate → Discover template → Analyze → Push → Create)
-   - Pass the base branch argument
-   - Let it handle template detection, commit analysis, and PR creation
+2. **Read the workflow defined in `.claude/commands/prp-core/prp-pr.md`** and follow all its phases, passing the base branch as `$ARGUMENTS`.
 
 3. **Record the PR URL** for the summary
 

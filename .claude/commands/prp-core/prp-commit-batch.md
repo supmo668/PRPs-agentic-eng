@@ -83,27 +83,14 @@ Proceed? You can adjust grouping, merge, or split any items.
 
 For each approved commit group:
 
-1. **Reset staging area** (if needed):
-   ```bash
-   git reset HEAD
-   ```
-
-2. **Stage only the files for this commit**:
+1. **Stage only the files for this commit**:
    ```bash
    git add {specific files}
    ```
 
-3. **Verify staging is correct**:
-   ```bash
-   git diff --cached --name-only
-   ```
+2. **Read the workflow defined in `.claude/commands/prp-core/prp-commit.md`** and follow all its phases, treating the already-staged files as the target (use `staged` as the target value).
 
-4. **Commit** with conventional message:
-   ```bash
-   git commit -m "{type}: {description}"
-   ```
-
-5. **Confirm** before moving to next group
+3. **Confirm** before moving to next group
 
 Repeat for each commit group in order.
 

@@ -70,13 +70,13 @@ Proceed?
 
 ## Phase 3: GENERATE — Create Each Plan
 
-For each approved item, invoke the full `/prp-plan` workflow:
+For each approved item, run the full plan workflow:
 
 1. Process plans **sequentially** in dependency order
 2. For each plan:
-   - If from a PRD: pass the PRD path and specify the target phase
-   - If from a feature list: pass the feature description directly
-   - Follow ALL phases of `/prp-plan` (Parse → Explore → Research → Design → Architect → Generate)
+   - Read the workflow defined in `.claude/commands/prp-core/prp-plan.md` and follow all its phases
+   - If from a PRD: pass the PRD path and specify the target phase as `$ARGUMENTS`
+   - If from a feature list: pass the feature description directly as `$ARGUMENTS`
    - The generated plan goes to `.claude/PRPs/plans/{name}.plan.md`
    - If sourced from a PRD, update the PRD's Implementation Phases table (set status to `in-progress`, add PRP Plan link)
 3. Brief confirmation after each plan before proceeding

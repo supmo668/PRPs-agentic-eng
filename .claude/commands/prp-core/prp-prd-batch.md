@@ -75,14 +75,14 @@ Should I proceed? You can also:
 
 ## Phase 3: GENERATE — Create Each PRD
 
-For each approved PRD, invoke the full `/prp-prd` workflow:
+For each approved PRD, run the full PRD workflow:
 
 ### Execution Strategy
 
 1. Process PRDs **sequentially** (each builds context for the next)
 2. For each PRD:
-   - Pass the scoped description as input to the `/prp-prd` process
-   - Follow ALL phases of `/prp-prd` (Foundation questions → Grounding → Deep Dive → etc.)
+   - Read the workflow defined in `.claude/commands/prp-core/prp-prd.md` and follow all its phases
+   - Pass the scoped description as the `$ARGUMENTS` input
    - **IMPORTANT**: For batch mode, answer Foundation/Deep Dive/Scope questions using context from the initiative description and previously generated PRDs. Only pause for user input when genuinely ambiguous.
    - Generate the PRD file to `.claude/PRPs/prds/{kebab-case-name}.prd.md`
 3. After each PRD, briefly confirm completion before moving to the next
